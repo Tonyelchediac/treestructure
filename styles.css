@@ -1,0 +1,196 @@
+:root {
+        --primary-color: #04253B;
+        --background: #cfcfcf;
+        --header-height: 60px;
+        --border-radius: 4px;
+        --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        --transition: background-color 0.3s ease;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f6f8;
+        color: #222;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--header-height);
+        background-color: var(--background);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+        box-shadow: var(--box-shadow);
+        z-index: 1000;
+    }
+
+    header img {
+        height: 40px;
+        max-height: 48px;
+        object-fit: contain;
+    }
+
+    header p {
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--primary-color);
+        margin: 0;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        margin-top: calc(var(--header-height) + 30px);
+        padding: 24px;
+        gap: 32px;
+    }
+
+    h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    @media (min-width: 900px) {
+        .container {
+            flex-direction: row;
+            gap: 32px;
+        }
+    }
+
+    .editor-container, .preview-container {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    textarea {
+        width: 100%;
+        height: 400px;
+        padding: 14px;
+        border: 1px solid #d1d5db;
+        border-radius: var(--border-radius);
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 15px;
+        resize: vertical;
+        background: #fff;
+        color: #222;
+        box-sizing: border-box;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+    textarea:focus {
+        border-color: var(--primary-color);
+    }
+
+    .preview {
+        background-color: #f8f9fa;
+        padding: 14px;
+        border: 1px solid #d1d5db;
+        border-radius: var(--border-radius);
+        white-space: pre;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 15px;
+        width: 100%;
+        height: 400px;
+        overflow: auto;
+        color: #222;
+        box-sizing: border-box;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    button {
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 500;
+        transition: var(--transition);
+        outline: none;
+    }
+
+    button:hover, button:focus {
+        background-color: #02131e;
+    }
+
+    .copy-btn {
+        background-color: #b30000;
+    }
+
+    .copy-btn:hover, .copy-btn:focus {
+        background-color: #e60000;
+    }
+
+    .options {
+        margin-top: 10px;
+        padding: 16px;
+        background-color: #f8f9fa;
+        border-radius: var(--border-radius);
+        border: 1px solid #e0e0e0;
+    }
+
+    .option-group {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    label {
+        font-weight: 600;
+        margin-bottom: 0;
+        margin-right: 6px;
+    }
+
+    select, input[type="checkbox"] {
+        margin-right: 8px;
+    }
+
+    .examples {
+        margin-top: 24px;
+    }
+
+    .examples h3 {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .example-btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: #e0e0e0;
+        color: #222;
+        border: none;
+        padding: 7px 14px;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.2s;
+    }
+
+    .example-btn:hover, .example-btn:focus {
+        background-color: #b3b3b3;
+        color: #fff;
+    }

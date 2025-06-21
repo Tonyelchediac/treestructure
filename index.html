@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Diagram Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/ei_1747852417134-removebg-preview.png" alt="ecss" />
+        <p>ECSS TREE STRUCTURE</p>
+    </header>
+    
+        <!--Tab to edit-->
+        
+<div class="container">       
+    <h1>Tree Diagram Generator</h1>
+    
+    <div class="container">
+        <div class="editor-container">
+            <div class="controls">
+                <div>
+                    <button id="format-btn">Format</button>
+                    <button id="clear-btn">Clear</button>
+                </div>
+                <button id="copy-btn" class="copy-btn">Copy to Clipboard</button>
+            </div>
+            <textarea id="input" placeholder="Enter your tree structure here. Use indentation (spaces or tabs) to create hierarchy. Example:
+
+root/
+    folder1/
+        file1.txt
+        file2.txt
+    folder2/
+        subfolder/
+            file3.txt
+    file4.txt"></textarea>
+        </div>
+        
+        <div class="preview-container">
+            <div class="controls">
+                <span>Preview:</span>
+            </div>
+            <div id="preview" class="preview"></div>
+        </div>
+    </div>
+    
+    <div class="options">
+        <div class="option-group">
+            <label>Tree Style:</label>
+            <select id="tree-style">
+                <option value="ascii">ASCII (├─ └─ │)</option>
+                <option value="box">Box Drawing (┌─ └─ │)</option>
+                <option value="simple">Simple (|-- `--)</option>
+            </select>
+        </div>
+        
+        <div class="option-group">
+            <label>Options:</label>
+            <input type="checkbox" id="trailing-slash" checked>
+            <label for="trailing-slash" style="display: inline; font-weight: normal;">Add trailing slash to directories</label>
+        </div>
+    </div>
+    
+    <div class="examples">
+        <h3>Examples:</h3>
+        <button class="example-btn" data-example="basic">Basic File Structure</button>
+        <button class="example-btn" data-example="project">Project Structure</button>
+        <button class="example-btn" data-example="family">Family Tree</button>
+        <button class="example-btn" data-example="org">Org Chart</button>
+    </div>
+</div>    
+<script src="script.js"></script>
+</body>
+</html>
